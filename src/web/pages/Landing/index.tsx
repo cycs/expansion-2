@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Layout } from "../../components/Layout";
 import { Header } from "../../components/Header";
 import { ContentHero } from "../../components/ContentHero";
-import btg from "../../../assets/EXP-22-27988-hp-v6.png";
+// import btg from "../../../assets/EXP-22-27988-hp-v6.png";
 
 export const LandingPage: FC = () => {
   return (
