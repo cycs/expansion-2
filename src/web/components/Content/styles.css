@@ -1,0 +1,572 @@
+.members {
+  a:hover {
+    color: black;
+  }
+
+  border-bottom: 1px solid #eeeeef;
+}
+
+.header {
+  h1 {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(1rem);
+    font-size: 2rem;
+    line-height: 1;
+    span {
+      font-size: 5rem;
+    }
+  }
+
+  p {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(1rem);
+    transition-delay: 0.2s;
+  }
+}
+
+.header.visible {
+  h1,
+  p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content {
+  margin-top: 8.5rem;
+}
+
+.button-link-effect {
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    color: white;
+    background-color: #e4032e;
+    border-color: transparent;
+
+    a {
+      color: white;
+    }
+
+    svg path {
+      stroke: white;
+    }
+  }
+
+  &:active {
+    background-color: #e4032e;
+  }
+}
+
+.gift-button {
+  background-color: #e4032e;
+  border-radius: 99px;
+  color: white;
+
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: #a9001f;
+    border-color: transparent;
+  }
+
+  &:active {
+    background-color: #a9001f;
+  }
+}
+
+.header-nav {
+  & a {
+    position: relative;
+    color: #303032;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #e4032e;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.35s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+.hexagon-content {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 0.5rem;
+  text-align: center;
+
+  h3 {
+    margin-top: 5rem;
+  }
+
+  svg {
+    z-index: -1;
+    position: absolute;
+    /* top: 0; */
+    width: 162%;
+
+    filter: drop-shadow(0px 30px 18px rgba(228 3 46 / 10%));
+  }
+
+  img {
+    top: -8.3rem;
+    position: absolute;
+    mask-image: url("../../../assets/Vector.svg");
+    mask-size: 100%;
+  }
+}
+
+.hexagon-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hexagon-content.hexagon-content-white {
+  p {
+    color: #8f8f90;
+  }
+  color: black;
+
+  svg {
+    filter: drop-shadow(0px 20px 18px rgba(0 0 0 / 10%));
+  }
+}
+
+.hexagon-content-title {
+  font-size: 2rem;
+}
+
+.hexagon-button {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 99px;
+  padding: 0.6rem 1.6rem;
+  border: 1px solid #eeeeef;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: #e4032e;
+    border-color: transparent;
+
+    a {
+      color: #e4032e;
+    }
+  }
+
+  &:active {
+    background-color: #e4032e;
+  }
+}
+
+.hexagon-button.hexagon-button-red {
+  border-color: transparent;
+
+  &:hover {
+    border-color: white;
+  }
+
+  &:active {
+    border-color: white;
+    background-color: #e4032e;
+  }
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(0deg, #e4032e, #9f9fef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pink-container {
+  height: 729px;
+  margin-top: 17.5rem;
+  position: relative;
+  padding: 7.5rem 0;
+
+  &::after {
+    left: -3rem;
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% + 8rem);
+    height: 100%;
+    background-image: url(/src/assets/alveoles.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 36rem -3.5rem;
+  }
+
+  &::before {
+    border-radius: 2rem;
+    z-index: -1;
+    content: "";
+    width: calc(100% + 8rem);
+    height: 100%;
+    background-color: #fce6ea;
+    position: absolute;
+    left: -4rem;
+  }
+}
+
+.resources-card {
+  opacity: 0;
+  transform: translateY(5rem);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  width: 468px;
+  height: fit-content;
+  gap: 3.5rem;
+  background-color: white;
+  border-radius: 4rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgb(175 0 33 / 15%) 0px 20px 40px -10px;
+  padding: 4rem 4rem 2rem 4rem;
+
+  img {
+    border-radius: 50%;
+    width: 178px;
+  }
+
+  &:last-child {
+    transform: translateY(7rem);
+    padding: 4rem;
+    box-shadow: rgb(175 0 33 / 15%) 0px 0px 40px -10px;
+    transition-delay: 0.2s;
+    img {
+      width: 128px;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  li {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 99px;
+    padding: 0.6rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+.resources-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+
+  &:last-child {
+    transform: translateY(5rem);
+  }
+}
+
+.actualites-container {
+  margin-top: 20rem;
+}
+
+.actualites-card {
+  padding: 0.75rem;
+  border-radius: 1.5rem;
+  border: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    span {
+      display: flex;
+      position: relative;
+    }
+
+    span::after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      height: 1px;
+      background-color: black;
+      bottom: 2px;
+    }
+  }
+}
+
+.actualite-card-image {
+  position: relative;
+
+  div {
+    border-radius: 99px;
+    background-color: #58585a;
+    padding: 0.5rem 0.75rem;
+    color: white;
+    width: fit-content;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+  }
+}
+
+.actualites-seemore {
+  border-radius: 99px;
+  border: 1px solid #d9d9d9;
+  font-size: 13px;
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+}
+
+.actualites-hexagons {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  svg {
+    width: 284px;
+    position: absolute;
+
+    path {
+      fill: #eeeeef;
+    }
+  }
+
+  svg {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  svg:first-child {
+    left: -14.8%;
+    bottom: 73.9%;
+  }
+
+  svg:nth-child(2) {
+    left: -2%;
+    bottom: 80.6%;
+  }
+
+  svg:nth-child(3) {
+    left: 54%;
+    bottom: 90.1%;
+  }
+
+  svg:nth-child(4) {
+    left: 79%;
+    bottom: 90.1%;
+  }
+
+  svg:last-child {
+    left: 92%;
+    bottom: 96.8%;
+
+    path {
+      fill: #e20031;
+    }
+  }
+}
+
+.actualites-hexagons.visible svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.soutien {
+  margin-top: 12rem;
+  justify-items: center;
+
+  ul {
+    gap: 97px;
+  }
+
+  li {
+    width: 100px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.footer {
+  border-top: 1px solid #cbcbcb;
+
+  button {
+    color: white;
+    background-color: #575756;
+    font-size: 13px;
+    border-radius: 99px;
+  }
+}
+
+.mentions {
+  border-top: 1px solid #cbcbcb;
+  grid-template-columns: auto 1fr;
+  font-size: 12px;
+
+  span {
+    grid-column: 1 / 2;
+    align-self: center;
+  }
+
+  > div {
+    grid-column: 2 / 3;
+    justify-self: end;
+    display: flex;
+  }
+}
+
+.pipe {
+  position: relative;
+  margin-left: 1rem;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 50%;
+    width: 1px;
+    background-color: black;
+    position: absolute;
+    left: -0.5rem;
+    top: 25%;
+  }
+}
+
+.particles {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+
+  * {
+    position: absolute;
+  }
+
+  svg {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.4s ease-out, transform 1s ease-out;
+  }
+}
+
+.particles svg.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.particles .circle {
+  top: 83%;
+  left: 4.5%;
+  transition-delay: 0.1s;
+}
+.particles .circle2 {
+  top: 30%;
+  left: 54.5%;
+  transition-delay: 0.2s;
+}
+.particles .cross {
+  top: 74%;
+  left: -2%;
+  transition-delay: 0.3s;
+}
+.particles .halfcircle {
+  top: 67%;
+  left: 50%;
+  transition-delay: 0.15s;
+}
+.particles .halfcircle2 {
+  top: 61%;
+  left: 90%;
+  transition-delay: 0.25s;
+}
+.particles .triangle {
+  top: 52%;
+  left: 62%;
+  transition-delay: 0.35s;
+}
+.particles .triangle2 {
+  top: 34%;
+  left: 98%;
+  transition-delay: 0.05s;
+}
+
+.particles .flower {
+  top: 31%;
+  left: 74.8%;
+  animation: rotate 30s linear infinite;
+  transition-delay: 0.2s;
+}
+.particles .rectangle {
+  top: 45%;
+  left: 80%;
+}
+.particles .rectangle2 {
+  top: 72%;
+  left: 87%;
+  transition-delay: 0.22s;
+}
+.particles .rectangle3 {
+  top: 74%;
+  left: 10.5%;
+  transition-delay: 0.13s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

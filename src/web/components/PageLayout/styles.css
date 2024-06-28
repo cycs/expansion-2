@@ -1,0 +1,13 @@
+.main-layout {
+  position: relative;
+  > img {
+    z-index: -1;
+    display: block;
+    height: 100%;
+    position: absolute;
+    height: 84rem;
+    right: -31rem;
+    opacity: 0.3;
+    top: -16.5rem;
+  }
+}
